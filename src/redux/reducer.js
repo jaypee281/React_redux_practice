@@ -2,10 +2,6 @@ import {combineReducers } from 'redux';
 import _users from '../Data/userDetails';
  const postReducer = function posts(state = _users, action) {
  switch(action.type) {
- case 'REMOVE_PICTURE' :
- return [...state.slice(0,action.i),...state.slice(action.i + 1)]
- case 'ADD_PICTURE' :
- return [{"id": action.id, "imageLink": action.imageLink, "description": action.description},...state]
  default: return state
  case 'ADD_USER' :
  return [action.post,state.users]
